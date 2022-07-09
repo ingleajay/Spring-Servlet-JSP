@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:c="http://www.springframework.org/schema/c"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ <context:annotation-config/>
+ <bean name="c1" class="com.springtutorial.lifecycle.Courses" p:cid="103" p:cname="JAVA" init-method="init" destroy-method="destroy"/>
+ 
+  <bean name="d1" class="com.springtutorial.lifecycle.Doctor" p:did="102" p:dname="Ajay" />
+ 
+   <bean name="p1" class="com.springtutorial.lifecycle.Patient" p:pid="101" p:pname="Vijay" />
+ 
+ </beans>

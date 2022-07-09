@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="hhtp://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ <bean class="com.springtutorial.SpringCore.Injection.primitive.setter.Student" name="student1">
+ 	<property name="sid">
+ 	<value>101</value>
+ 	</property>
+ 	<property name="sname">
+ 	<value>Ajay Ingle</value>
+ 	</property>
+ 	<property name="smarks">
+ 	<value>99</value>
+ 	</property>
+ </bean>
+ <!-- or -->
+ <bean class="com.springtutorial.SpringCore.Injection.primitive.setter.Student" name="student2" p:sid="102" p:sname="Vijay Ingle" p:smarks="100"/>
+ <!-- or -->
+ <bean class="com.springtutorial.SpringCore.Injection.primitive.setter.Student" name="student3">
+ 	<property name="sid" value="103"/>
+ 	<property name="sname" value="Sonali"/>
+ 	<property name="smarks" value="88"/>
+ </bean>
+ 
+ </beans>

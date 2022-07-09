@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:c="http://www.springframework.org/schema/c"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+<context:annotation-config/>
+<bean name="c1" class="com.springtutorial.autowire.annotation.qualifier.College" p:cid="111" p:cname="VIT"/>
+<bean name="c2" class="com.springtutorial.autowire.annotation.qualifier.College" p:cid="112" p:cname="VSIT"/>
+
+<!--
+if on constructor 
+ <bean name="student1" class="com.springtutorial.autowire.annotation.qualifier.Student" c:sid="101" />
+ -->
+<bean name="student1" class="com.springtutorial.autowire.annotation.qualifier.Student" p:sid="101" />
+ 
+</beans>

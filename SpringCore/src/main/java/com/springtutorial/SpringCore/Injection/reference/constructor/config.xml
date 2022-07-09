@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="hhtp://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:c="http://www.springframework.org/schema/c"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ <bean class="com.springtutorial.SpringCore.Injection.reference.constructor.Book" name="bref1"  c:bid="101" c:bname="ulman"/>
+ <bean class="com.springtutorial.SpringCore.Injection.reference.constructor.Book" name="bref2"  c:bid="102" c:bname="H.C.Verma"/>
+ <bean class="com.springtutorial.SpringCore.Injection.reference.constructor.Book" name="bref3"  c:bid="103" c:bname="R.D.Sharma"/>
+ 
+ 
+ <bean class="com.springtutorial.SpringCore.Injection.reference.constructor.Exam" name="exam1">
+   <constructor-arg>
+   <value>Complier design</value>
+   </constructor-arg>
+   <constructor-arg ref="bref1"/>
+ </bean>
+ <!-- or -->
+ 
+ <bean class="com.springtutorial.SpringCore.Injection.reference.constructor.Exam" name="exam2">
+ <constructor-arg value="Physics"/>
+ <constructor-arg ref="bref2"/>
+ </bean>
+  <!-- or -->
+ 
+  <bean class="com.springtutorial.SpringCore.Injection.reference.constructor.Exam" name="exam3"  c:ename="Higher Maths"  c:book-ref="bref3" /> 
+  
+ </beans>
